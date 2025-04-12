@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/mikelitoris/42/Rank_4/CPPs/CPP_04/ex00'
+echo -e "\033[1m\033[34m[Linking]\033[0m ex03..."
+c++ -Wall -Wextra -Werror -std=c++98 main.cpp Animal.cpp Dog.cpp Cat.cpp -o ex03
+echo -e "\033[1m\033[32m[✓] Build successful!\033[0m"
+make: Leaving directory '/home/mikelitoris/42/Rank_4/CPPs/CPP_04/ex00'
+ 
