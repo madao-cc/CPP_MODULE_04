@@ -6,7 +6,7 @@
 /*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:22:08 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/27 09:54:19 by madao-da         ###   ########.fr       */
+/*   Updated: 2025/05/27 10:13:09 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ int main()
 	failDog->setIdea(200, "This should not work!");
 	std::cout << YELLOW << "Trying to get idea at index 200 (out of bounds):" << RESET << std::endl;
 	failDog->getIdea(200);
+
+	delete failDog;
 
 	// 2. Shallow copy test (simulate what would go wrong)
 	Dog* shallowDog1 = new Dog();
