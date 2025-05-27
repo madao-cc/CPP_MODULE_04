@@ -12,19 +12,14 @@
 
 #include "AAnimal.hpp"
 
-AAnimal::AAnimal() : type("Unknown")
+AAnimal::AAnimal() : type("Animal")
 {
-	std::cout << GREEN << "AAnimal default constructor called" << RESET << std::endl;
-}
-
-AAnimal::AAnimal(std::string name) : type(name)
-{
-	std::cout << GREEN << "AAnimal " << this->type << " constructor called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal constructor called" << RESET << std::endl;
 }
 
 AAnimal::AAnimal(const AAnimal &src)
 {
-	std::cout << GREEN << "AAnimal " << src.type << " copy constructor called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal copy constructor called" << RESET << std::endl;
 	*this = src;
 }
 AAnimal::~AAnimal()
@@ -34,7 +29,7 @@ AAnimal::~AAnimal()
 
 AAnimal	&AAnimal::operator=(const AAnimal &src)
 {
-	std::cout << GREEN << "AAnimal " << src.type << " assignation operator called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal assignation operator called" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
@@ -49,5 +44,5 @@ std::string const	&AAnimal::getType() const
 
 void	AAnimal::makeSound() const
 {
-	std::cout << "AAnimal " << this->type << " makes a sound" << std::endl;
+	std::cout << "AAnimal makes an animal's generic sound" << std::endl;
 }

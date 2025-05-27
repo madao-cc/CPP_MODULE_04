@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:22:08 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/26 11:23:05 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:54:19 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,7 @@ int main()
 	std::cout << YELLOW << "Trying to get idea at index 200 (out of bounds):" << RESET << std::endl;
 	failDog->getIdea(200);
 
-	// 2. Using base Animal class directly (should not instantiate or should warn)
-	// An abstract class (has at least one pure virtual function) cannot be instantiated
-	// std::cout << YELLOW << "Trying to instantiate Animal directly:" << RESET << std::endl;
-	// Animal* failAnimal = new Animal(); // Uncommenting this should cause a compile error if Animal is abstract
-
-	// 3. Shallow copy test (simulate what would go wrong)
+	// 2. Shallow copy test (simulate what would go wrong)
 	Dog* shallowDog1 = new Dog();
 	shallowDog1->setIdea(0, "Original idea");
 	Dog* shallowDog2 = shallowDog1; // Shallow copy (pointer copy)

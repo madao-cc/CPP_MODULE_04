@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:05:34 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/20 16:52:37 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:31:52 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class	Cat : public Animal
 	public:
 		// Constructors
 		Cat();
-		Cat(std::string name);
 		// Copy Constructor
 		Cat(const Cat &src);
 		// Destructor

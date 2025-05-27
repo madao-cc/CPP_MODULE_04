@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:35:48 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/04/03 15:36:28 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:31:59 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class	WrongCat : public WrongAnimal
 	public:
 		// Constructors
 		WrongCat();
-		WrongCat(std::string name);
 		// Copy constructor
 		WrongCat(const WrongCat &src);
 		// Destructor

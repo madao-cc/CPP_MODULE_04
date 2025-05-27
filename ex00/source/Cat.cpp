@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:17:15 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/20 16:46:08 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:37:08 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 Cat::Cat() : Animal()
 {
-	std::cout << YELLOW << "Cat default constructor called" << RESET << std::endl;
+	std::cout << YELLOW << "Cat constructor called" << RESET << std::endl;
 	this->type = "Cat";
-}
-
-Cat::Cat(std::string name) : Animal()
-{
-	this->type = name;
-	std::cout << YELLOW << "Cat " << this->type << " constructor called" << RESET << std::endl;
 }
 
 Cat::Cat(const Cat &src) : Animal()
 {
-	std::cout << YELLOW << "Cat " << src.type << " copy constructor called" << RESET << std::endl;
 	*this = src;
+	std::cout << YELLOW << "Cat copy constructor called" << RESET << std::endl;
 }
 
 Cat::~Cat()
@@ -37,15 +31,15 @@ Cat::~Cat()
 
 Cat	&Cat::operator=(const Cat &src)
 {
-	std::cout << YELLOW << "Cat " << src.type << " assignation operator called" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
 	}
+	std::cout << YELLOW << "Cat assignation operator called" << RESET << std::endl;
 	return (*this);
 }
 
 void	Cat::makeSound() const
 {
-	std::cout << YELLOW << "Cat " << this->type << " says: Meow!" << RESET << std::endl;
+	std::cout << YELLOW << "Cat says: Meow!" << RESET << std::endl;
 }

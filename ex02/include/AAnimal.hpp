@@ -32,7 +32,6 @@ class	AAnimal
 	public:
 		// Constructors
 		AAnimal();
-		AAnimal(std::string name);
 		// Copy Constructor
 		AAnimal(const AAnimal &src);
 		// Destructor

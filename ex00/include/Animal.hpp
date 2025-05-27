@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 17:25:07 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/20 16:46:08 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:31:49 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class	Animal
 	public:
 		// Constructors
 		Animal();
-		Animal(std::string name);
 		// Copy Constructor
 		Animal(const Animal &src);
 		// Destructor

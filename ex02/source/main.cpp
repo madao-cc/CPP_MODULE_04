@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:22:08 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/26 11:22:57 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 10:03:46 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,22 @@
 
 int main()
 {
+	std::cout << MAGENTA << "=== Testing Animal, Dog, and Cat ===" << RESET << std::endl << std::endl;
+
+	const AAnimal* myDog = new Dog();
+	const AAnimal* myCat = new Cat();
+
+	std::cout << CYAN << myDog->getType() << RESET << " " << std::endl;
+	std::cout << YELLOW << myCat->getType() << RESET << " " << std::endl;
+
+	myDog->makeSound(); // Should output the Cat sound
+	myCat->makeSound(); // Should output the Dog sound
+
+	delete myDog;
+	delete myCat;
+
+	std::cout << std::endl;
+
 	std::cout << MAGENTA << "=== Animal Array Test ===" << RESET << std::endl << std::endl;
 
 	AAnimal* animals[10];
@@ -75,10 +91,6 @@ int main()
 
 	std::cout << std::endl << RED << "=== Failing/Incorrect Tests ===" << RESET << std::endl << std::endl;
 
-	// 1. Try to instantiate AAnimal directly (should fail to compile)
-	// std::cout << YELLOW << "Trying to instantiate AAnimal directly:" << RESET << std::endl;
-	// AAnimal* failAnimal = new AAnimal(); // Uncommenting this should cause a compile error
-
 	// 1. Accessing out-of-bounds idea index (should fail or warn)
 	Dog* failDog = new Dog();
 	std::cout << YELLOW << "Trying to set idea at index 200 (out of bounds):" << RESET << std::endl;
@@ -89,7 +101,8 @@ int main()
 	// 2. Using base Animal class directly (should not instantiate or should warn)
 	// An abstract class (has at least one pure virtual function) cannot be instantiated
 	// std::cout << YELLOW << "Trying to instantiate Animal directly:" << RESET << std::endl;
-	// Animal* failAnimal = new Animal(); // Uncommenting this should cause a compile error if Animal is abstract
+	// AAnimal* failAnimal = new AAnimal(); // Uncommenting this should cause a compile error if Animal is abstract
+	// failAnimal->getType();
 
 	// 3. Shallow copy test (simulate what would go wrong)
 	Dog* shallowDog1 = new Dog();

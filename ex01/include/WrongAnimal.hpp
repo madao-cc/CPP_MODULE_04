@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:30:22 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/23 20:09:38 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:44:45 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ class	WrongAnimal
 	public:
 		// Constructors
 		WrongAnimal();
-		WrongAnimal(std::string name);
 		// Copy constructor
 		WrongAnimal(const WrongAnimal &src);
 		// Destructor

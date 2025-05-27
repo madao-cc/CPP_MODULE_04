@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:21:34 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/20 16:46:08 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:38:06 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 Dog::Dog() : Animal()
 {
-	std::cout << BLUE << "Dog default constructor called" << RESET << std::endl;
+	std::cout << BLUE << "Dog constructor called" << RESET << std::endl;
 	this->type = "Dog";
-}
-
-Dog::Dog(std::string name) : Animal()
-{
-	this->type = name;
-	std::cout << BLUE << "Dog " << this->type << " constructor called" << RESET << std::endl;
 }
 
 Dog::Dog(const Dog &src) : Animal()
 {
-	std::cout << BLUE << "Dog " << src.type << " copy constructor called" << RESET << std::endl;
 	*this = src;
+	std::cout << BLUE << "Dog copy constructor called" << RESET << std::endl;
 }
 
 Dog::~Dog()
@@ -37,15 +31,15 @@ Dog::~Dog()
 
 Dog	&Dog::operator=(const Dog &src)
 {
-	std::cout << BLUE << "Dog " << src.type << " assignation operator called" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
 	}
+	std::cout << BLUE << "Dog assignation operator called" << RESET << std::endl;
 	return (*this);
 }
 
 void	Dog::makeSound() const
 {
-	std::cout << BLUE << "Dog " << this->type << " says: Woof!" << RESET << std::endl;
+	std::cout << BLUE << "Dog says: Woof!" << RESET << std::endl;
 }

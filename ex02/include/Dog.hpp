@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:10:28 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/04/09 14:59:27 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:55:00 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class	Dog : public AAnimal
 	public:
 		// Constructors
 		Dog();
-		Dog(std::string name);
 		// Copy Constructor
 		Dog(const Dog &src);
 		// Destructor

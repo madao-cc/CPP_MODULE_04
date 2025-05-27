@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:21:34 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/23 19:55:49 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:50:01 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,8 @@
 
 Dog::Dog() : Animal()
 {
-	std::cout << BLUE << "Dog default constructor called" << RESET << std::endl;
+	std::cout << BLUE << "Dog constructor called" << RESET << std::endl;
 	this->type = "Dog";
-	this->_idea = new Brain();
-	if (!this->_idea)
-	{
-		std::cout << RED << "Dog Brain allocation failed" << RESET << std::endl;
-		exit(1);
-	}
-}
-
-Dog::Dog(std::string name) : Animal()
-{
-	this->type = name;
-	std::cout << BLUE << "Dog " << this->type << " constructor called" << RESET << std::endl;
 	this->_idea = new Brain();
 	if (!this->_idea)
 	{
@@ -38,7 +26,7 @@ Dog::Dog(std::string name) : Animal()
 
 Dog::Dog(const Dog &src) : Animal()
 {
-	std::cout << BLUE << "Dog " << src.type << " copy constructor called" << RESET << std::endl;
+	std::cout << BLUE << "Dog copy constructor called" << RESET << std::endl;
 	this->_idea = new Brain(*src._idea); // Deep copy of Brain
 	if (!this->_idea)
 	{
@@ -56,7 +44,7 @@ Dog::~Dog()
 
 Dog	&Dog::operator=(const Dog &src)
 {
-	std::cout << BLUE << "Dog " << src.type << " assignation operator called" << RESET << std::endl;
+	std::cout << BLUE << "Dog assignation operator called" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
@@ -74,7 +62,7 @@ Dog	&Dog::operator=(const Dog &src)
 
 void	Dog::makeSound() const
 {
-	std::cout << BLUE << "Dog " << this->type << " says: Woof!" << RESET << std::endl;
+	std::cout << BLUE << "Dog says: Woof!" << RESET << std::endl;
 }
 
 void	Dog::getIdea(int index) const
@@ -115,4 +103,4 @@ void	Dog::setIdea(int index, std::string idea)
 {
 	if (this->_idea)
 		this->_idea->setIdea(index, idea);
-}	
+}

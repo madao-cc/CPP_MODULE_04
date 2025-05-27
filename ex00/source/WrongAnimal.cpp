@@ -3,29 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mikelitoris <mikelitoris@student.42.fr>    +#+  +:+       +#+        */
+/*   By: madao-da <madao-da@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:41:35 by mikelitoris       #+#    #+#             */
-/*   Updated: 2025/05/20 16:46:08 by mikelitoris      ###   ########.fr       */
+/*   Updated: 2025/05/27 09:38:36 by madao-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("Unknown_but_Wrong")
+WrongAnimal::WrongAnimal() : type("Animal_but_Wrong")
 {
-	std::cout << GREEN << "WrongAnimal default constructor called" << RESET << std::endl;
-}
-
-WrongAnimal::WrongAnimal(std::string name) : type(name)
-{
-	std::cout << GREEN << "WrongAnimal " << this->type << " constructor called" << RESET << std::endl;
+	std::cout << GREEN << "WrongAnimal constructor called" << RESET << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &src)
 {
-	std::cout << GREEN << "WrongAnimal " << src.type << " copy constructor called" << RESET << std::endl;
 	*this = src;
+	std::cout << GREEN << "WrongAnimal copy constructor called" << RESET << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
@@ -35,11 +30,11 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal	&WrongAnimal::operator=(const WrongAnimal &src)
 {
-	std::cout << GREEN << "WrongAnimal " << src.type << " assignation operator called" << RESET << std::endl;
 	if (this != &src)
 	{
 		this->type = src.type;
 	}
+	std::cout << GREEN << "WrongAnimal assignation operator called" << RESET << std::endl;
 	return (*this);
 }
 
@@ -50,5 +45,5 @@ std::string const	&WrongAnimal::getType() const
 
 void	WrongAnimal::makeSound() const
 {
-	std::cout << "WrongAnimal " << this->type << " makes a sound" << std::endl;
+	std::cout << "WrongAnimal makes a sound" << std::endl;
 }
