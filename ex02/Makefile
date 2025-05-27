@@ -3,7 +3,7 @@ CXX		:= c++
 CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 # ==== Project Name ====
-NAME		:= ex01
+NAME		:= ex02
 
 # ==== Directories ====
 SRCDIR		:= source
@@ -18,6 +18,10 @@ SRCS		:= main.cpp	\
 		Brain.cpp
 
 OBJS		:= $(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
+
+# Add SRCDIR prefix when building the list of source files
+SRC_PATHS := $(addprefix $(SRCDIR)/, $(SRCS))
+OBJS		:= $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
 
 # ==== Colors ====
 RESET		:= \033[0m

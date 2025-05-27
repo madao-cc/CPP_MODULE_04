@@ -18,7 +18,9 @@ SRCS		:= main.cpp	\
 		WrongAnimal.cpp	\
 		WrongCat.cpp
 
-OBJS		:= $(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
+# Add SRCDIR prefix when building the list of source files
+SRC_PATHS := $(addprefix $(SRCDIR)/, $(SRCS))
+OBJS		:= $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
 
 # ==== Colors ====
 RESET		:= \033[0m
